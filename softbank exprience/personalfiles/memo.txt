@@ -1,0 +1,297 @@
+VPNアクセス：dev-vpn.mb.softbank.jp
+
+DEVアカウント：
+dev6979205p4
+Dev#6979205
+Dev6#79205
+
+RDSアクセス:
+https://rds01.tm.softbank.jp/rdweb/pages/ja-jp/login.aspx?ReturnUrl=/rdweb/pages/ja-jp/Default.aspx
+OAアカウント：
+kewen.li@g.softbank.co.jp
+lik99
+B71b734b5a
+
+
+https://sb.webmtg.jp/
+
+http://code-dev.ark.sbb-sys.info/users/sign_in
+http://code-dev.ark.sbb-sys.info/local_tmp_grp/ivt-bst-dst-eosl
+
+gpupdate /force
+
+DSTログイン用
+http://localhost:8080/DST_WEB/
+★試験用アカウント
+
+ID: 9000008L3e
+　　9000048L3e
+PASS: PassWord$99
+
+DseDDunningBasicJntDaoImpl.java
+ >>updateDseKSDInsResn
+ >401行目
+
+
+DST開発バッチサーバ：ybdv14000    10.157.233.23
+ユーザーとパスワード：dtpdbat1/Admin000
+
+http://localhost:8080/botweb/html/BO200_W00.html
+http://localhost:8080/bstweb/html/CM001_W00.html
+
+
+
+https://edbjapan.com/edbmanual/EPAS_Oracompat_Ref_Guide_v11_J_set/
+
+
+http://10.157.83.141:8082/dstweb/
+
+XTDT01W
+
+開発 S1环境BATCH IVT/IVB
+10.157.131.178
+
+開発 S1环境BATCH BOT/BOB DST/DSB
+Web ssdv01441(10.157.83.138)
+
+BST/BSB
+ssdv01442(10.157.83.139)
+
+開発 S1环境BATCH DST/DSB	BST/BSB
+ssdv01443
+(10.157.83.140)
+
+
+
+                <datasource jndi-name="java:/dstxtbt0101" pool-name="dstxtbt0101" enabled="true" use-java-context="true" statistics-enabled="${wildfly.datasources.statistics-enabled:${wildfly.statistics-enabled:false}}">
+                    <connection-url>jdbc:oracle:thin:@10.12.21.99:1522/BMT_DVCMBT04</connection-url>
+                    <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+                    <driver>ojdbc6driver</driver>
+                    <security>
+                        <user-name>XTBT011</user-name>
+                        <password>XTBT011</password>
+                    </security>
+                </datasource>
+                
+name="jndiName" value="java:/dstxtbt0101"
+
+サーバ
+jdbc:edb://10.12.23.59:5433/billing01
+User Name:xtbt01
+Password:xpasstbt0101
+
+
+参照可能資料
+■PJ9基幹DB（PAT）
+java:/dstxtbt0101
+jdbc:edb://10.12.23.59:5433/billing01
+xtbt01
+xpasstbt0101
+
+■DST
+java:/dstxtdt0101
+jdbc:edb://10.12.23.82:5433/pdvtcmma
+xtdt01w
+xpasstdt01w01
+
+■加入者DB
+java:/dstxtsm1001
+jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.12.21.99)(PORT=1522)))(CONNECT_DATA=(SERVICE_NAME=BMT_DVCMBT04)(SERVER=DEDICATED)))
+XTSM10
+XTSM10
+
+■BST
+java:/dstxtst0101
+jdbc:edb://10.12.23.82:5433/pdvtcmma
+xtst01w
+xpasstst01w01
+
+
+DST開発WEB&AP WEB/APサーバ：ybdv13999    10.157.233.22
+							ユーザ		パスワード	
+							root		Dstp@ssword1
+							dtpdbat1	Admin000
+							
+							■ログイン先情報
+							・ホスト名：10.157.233.22
+							・ユーザーID：root
+							・パスワード：Dstp@ssword1
+DST NEW FOR EDB
+S1_WildFly管理画面 http://10.157.233.22:20990/console/index.html
+UT_WildFly管理画面 http://localhost:8080/console/index.html
+ユーザーとパスワード：admin	welcome1#
+
+root@ybdv13999# cd /opt/jboss/wildfly-22.0.0-02/bin
+root@ybdv13999# sh ./jboss-cli.sh -c
+[domain@localhost:20990]: deploy /root/Tools/DST/dstweb.war --server-groups=Sg2
+[domain@localhost:20990]: undeploy dstweb.war
+
+
+IVT NEW FOR EDB
+S1_WildFly管理画面 http://10.157.233.26:20990/console/index.html
+ユーザーとパスワード：admin	welcome1#
+
+Teraterm
+■ログイン先情報
+・ホスト名：10.157.233.26
+・ユーザーID：root
+・パスワード：Ivtp@ssword1
+
+root@ybdv13999# cd /opt/jboss/wildfly-22.0.0-02/bin
+root@ybdv13999# sh ./jboss-cli.sh -c
+[domain@localhost:20990]: deploy /root/Tools/IVT/ivtapp/ivtapp.war --server-groups=Sg1
+[domain@localhost:20990]: undeploy dstweb.war
+
+ deploy /root/Tools/IVT/ivtapp/ivtapp.war --server-groups=Sg1
+ deploy /root/Tools/IVT/ivtapp/HCAPP.war --server-groups=Sg1
+ deploy /root/Tools/IVT/obipdf/HCPDF.war --server-groups=Sg2
+ deploy /root/Tools/IVT/obipdf/obipdf.war --server-groups=Sg2
+
+Dstテストデータ運用
+請求先番号：200016033340
+契約者番号：210028951833
+請求群：30
+発送群：30
+
+
+請求グループID（bill_group_id）：200002534909
+グループID（group_id）：12345678901234567891
+担当者ID（charge_id）：9000001L3e
+
+
+請求先住所：
+990-2315
+山形県山形市大字津金沢６５７
+
+
+
+DST　DB
+ServerName=10.12.23.82, Port=5433, Database=pdvtcmma
+xtdt01w/xpasstdt01w01
+xtdt01w_1/xpasstdt01w_101
+
+
+
+
+
+BST_S2_bstxtst0101_XTST01W
+
+
+IVT_S2_dstxtdt0101_XTDT01W
+
+10.12.21.99
+1522
+
+BMT_DVCMBT04
+
+LoadStar Scheduler
+■LSS
+http://10.157.83.124/jmcsui/index/index
+ulij107/yidatec99
+
+
+Eclipse 打成 WAR 包
+\\devwcfs.local\share3\data3\shareprj\IVT_BST_DST_DeOracle対応\サーバ環境構築手順\BOT_BST_DST\10.手順書
+
+・【Linux対応】【Web】TELECOM商用環境構築手順.xlsx
+　SHEET[アプリケーションリリース(DSTデプロイ)]
+
+env | grep 'DSE_EDB_HOST'
+
+
+本机Git Path
+C:\Users\dev6979205p4\AppData\Local\Programs\Git
+
+
+
+TeraTermコマンド備忘録【覚えておくと便利】
+https://tabalog.org/teraterm-cmd/
+
+https://qiita.com/khale/items/b8abac13d46985322271
+
+/home/dtpdbat1/work/dev01/src/programs/sys/inc
+
+/home/dtpdbat1/work/dev01/src/programs/cmd
+make -f dsecmmkst
+make -f dsemkst
+
+make -p dsemkst
+
+Linux下C语言多文件的编译以及makefile的应用 
+https://www.cnblogs.com/aiguona/p/9162500.html
+
+linux怎么执行sh文件
+https://www.php.cn/linux-421139.html
+
+公有 (file://Dxdeir22100093/公有)
+
+
+
+
+
+"Git: View History", "Git: View File History" or "Git: View Line History".
+
+
+
+
+Merge 日本側のEDB対応　From　Branch→develop_linux BY 進藤 隆生
+
+
+src/DST_WEB/src/jp/co/softbankmobile/dse/integration/dao/kikan/CollectionExclusionDaoImpl.java
+
+
+1.COMMIT/ROLLBACK导致游标失效的对策参照
+dseSKBRcvInsDelInfo.pc
+
+2.测试log文件夹分类方法
+#临时修改环境变量
+export DSE_ANALYZE_LOG_DIR=/sb/dst/batch/logs/log/analyze/xxx/
+周16:49
+dseGNJMngKnsPsn.pc
+
+
+    <parameter name="userName">admin</parameter>
+    <parameter name="password">Ivt1</parameter>
+    axis2
+    
+    
+
+＞＞1，Proc→ECPG：
+＞＞①結合用旧Proc（ORACLE）gb行用バッチサーバ
+    10.157.83.143
+    ユーザ		パスワード
+    dtpdbat1	Admin000
+
+＞＞②結合用新ECPG（EDB）gb行用バッチサーバ
+    10.157.233.29
+
+＞＞２，JAVA WEB：
+＞＞①結合用旧WEB画面（ORACLE）gb行用WEBサーバ
+    10.157.83.141
+＞＞②結合用新WEB画面（EDB）gb行用WEBサーバ
+    10.157.233.28
+    ユーザ		パスワード
+    dtpdbat1	Admin000
+
+＞＞３、各DB
+＞＞①結合用旧ORACLE的DSE、基幹、加入者、統合履歴。。。等
+    is86d31b_s2_dt_listeners,xtdt01W,XTDT01W    ←BSSDB接続情報（SBTMでは、D'SeのDBへ向ける）（IP：10.12.21.99）
+    is86d31b_s2_dt_listeners,XTSM01W,XTSM01W    ←加入者DB接続情報（IP：10.12.21.99）
+    EDB,10.12.23.59,5433,billing01,xtbt01,xpasstbt0101    ←PJ9基幹DB接続情報
+    G1LG1JLG_DST,LGLG11,LG-LG11    ←統合履歴DB1接続情報（IP：10.157.96.197）
+    G1LG1JLG_DST,LGLG11,LG-LG11    ←統合履歴DB2接続情報（IP：10.157.96.197）
+＞＞②結合用新EDB的DSE、基幹、加入者、統合履歴。。。等
+    EDB,10.12.23.92,5433,pdvtcmma,xtdt01w,x@pass@tdt01w01    ←BSSDB接続情報（SBTMでは、D'SeのDBへ向ける）
+    EDB,10.12.23.92,5433,pdvtcmma,xtdt01w,x@pass@tdt01w01    ←加入者DB接続情報（DBLink利用）:未定
+    EDB,10.12.23.59,5433,billing01,xtbt01,xpasstbt0101       ←PJ9基幹DB接続情報
+    Oracle,10.157.96.197,1523,TMR_DVCMTR01,LGLG11,LG-LG11    ←統合履歴DB1接続情報（shell内のsqlplus利用）
+    Oracle,10.157.96.197,1523,TMR_DVCMTR01,LGLG11,LG-LG11    ←統合履歴DB2接続情報（shell内のsqlplus利用）
+
+
+
+开发环境（L3环境）　⇔　OA（RDS）環境（L2环境）
+之间传递文件方法:
+
+工具：proself
+L2环境proself→チャットで送付
+L3环境proself→http://proself-l3dev/proself/login/login.go?AD=init

@@ -1,0 +1,53 @@
+Private Sub CommandButton1_Click()
+
+Dim 提示信息
+Dim 最后行号
+Dim 循环计数
+Dim 重复数
+Dim 筛选列
+Dim 升降序
+
+'根据需要设定筛选列
+筛选列 = "B"
+
+'禁止屏幕刷新
+Application.ScreenUpdating = False
+
+提示信息 = MsgBox("先删除不重复的行吗？", vbOKCancel, "警告：")
+
+If 提示信息 = 1 Then
+'先删除不重复的
+最后行号 = Range(筛选列 & "65536").End(xlUp).Row
+For 循环计数 = 最后行号 To 2 Step -1 '不处理首行的标题栏
+重复数 = Application.WorksheetFunction.CountIf(Range(筛选列 & ":" & 筛选列), Range(筛选列 & Format(循环计数))) 'vba中调用Excel内置函数CountIf()
+If 重复数 = 1 Then
+Rows(Format(循环计数) & ":" & Format(循环计数)).Delete
+End If
+Next 循环计数
+End If
+
+'再删除重复的(保留1行)
+提示信息 = MsgBox("现在删除重复数据只保留1行吗？", vbOKCancel, "警告：")
+
+If 提示信息 = 1 Then
+最后行号 = Range(筛选列 & "65536").End(xlUp).Row
+For 循环计数 = 最后行号 To 2 Step -1 '不处理首行的标题栏
+重复数 = Application.WorksheetFunction.CountIf(Range(筛选列 & ":" & 筛选列), Range(筛选列 & Format(循环计数))) 'vba中调用Excel内置函数CountIf() 盈搜财税 www.ringsou.com
+If 重复数 > 1 Then
+Rows(Format(循环计数) & ":" & Format(循环计数)).Delete
+End If
+Next 循环计数
+End If
+
+'恢复屏幕刷新
+Application.ScreenUpdating = True
+
+'将结果排序(去掉下面的注析就可用)
+'最后行号 = Range(筛选列 & "65536").End(xlUp).Row
+'升降序 = xlAscending '升序：升降序 = xlAscending 降序：升降序 = xlDescending
+'On Error Resume Next
+'Range(筛选列 & 最后行号).Sort Key1:=Range(筛选列 & "2"), Order1:=升降序, Header:=xlGuess, _
+'OrderCustom:=1, MatchCase:=False, Orientation:=xlTopToBottom, SortMethod _
+':=xlPinYin
+'If Err <> 0 Then MsgBox "“" & 筛选列 & "”列无法排序！"
+End Sub

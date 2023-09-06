@@ -1,0 +1,14 @@
+在eclipse中用axis2生成webservice时遇到的问题
+指定好wsdl之后继续，eclipse会弹框提示：
+
+Exception occurred while reading or writing file {0}The Axis2 facets cannot be installed since the Axis2 runtime location has not been set.
+Go to the Web Services preference page and set the Axis2 runtime location under Axis2 Preferences.
+实际上我已经指定了axis2的路径并且看到了”Axis2 runtime loaded successfully“字样。
+
+求解
+我也遇到这样的问题，可以试一下下面的方法，我是这么解决的：
+1、File->Switch WorkSpace->(new workspace)
+2、Window->Preferences->Web Services->Axis2 Preferences->Axis2 runtime location
+3、新建一个项目，勾选上Axis2
+4、将新的Workspace路径下的\.metadata\.plugins\org.apache.axis2.facet\下复制到之前的Workspace，再将eclipse切换到原来的Workspace就可以了
+5、删掉新建的Workspace

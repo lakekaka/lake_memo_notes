@@ -1,0 +1,27 @@
+自己的dev账号登陆
+
+	L2環境
+	RDS01:
+		https://rds01.tm.softbank.jp/RDWeb/Pages/ja-JP/login.aspx?ReturnUrl=/RDWeb/Pages/ja-JP/Default.aspx
+		例:bb\guanc93
+		   D8ecfe0f37
+
+	Proself ログインURL
+		L3環境（本地）	http://proself-l3dev/proself/login/login.go?AD=init
+		L2環境			http://proself-l2/proself/login/login.go?AD=init
+		
+	GitLab URL
+	http://code-dev.ark.sbb-sys.info/users/sign_in
+
+	Gmailなど
+		ログインID：社員番号を入力（例：6941844）
+		メールアドレス：自分のGmailアドレスを入力（例：shuai.liang02@g.softbank.co.jp）
+
+	GitLab URL
+		http://code-dev.ark.sbb-sys.info/users/sign_in
+		http://code-dev.ark.sbb-sys.info/local_tmp_grp/ivt-bst-dst-eosl(可能暂时访问不了)
+
+	平常开会都用这个（本地浏览器打开）
+		https://sb.webmtg.jp（WEBカン）这个自己注册就行，首页【はじめての方】
+		PC端要是没声音设备的话，可以用这个WEBカン开会，共享画面啥的
+
